@@ -20,6 +20,7 @@
 		AE43FEBD2425CF6800DC73E0 /* poster-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = AE43FEBC2425CF6800DC73E0 /* poster-placeholder.png */; };
 		AE43FEBF242696B200DC73E0 /* ViewDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43FEBE242696B200DC73E0 /* ViewDetailsViewController.swift */; };
 		AE43FEC12426B24100DC73E0 /* homeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AE43FEC02426B24100DC73E0 /* homeIcon.png */; };
+		AE43FEC42426F7F300DC73E0 /* mapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AE43FEC32426F7F100DC73E0 /* mapIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		AE43FEBC2425CF6800DC73E0 /* poster-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "poster-placeholder.png"; path = "../../../../../Downloads/poster-placeholder.png"; sourceTree = "<group>"; };
 		AE43FEBE242696B200DC73E0 /* ViewDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDetailsViewController.swift; sourceTree = "<group>"; };
 		AE43FEC02426B24100DC73E0 /* homeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeIcon.png; sourceTree = "<group>"; };
+		AE43FEC32426F7F100DC73E0 /* mapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		AE43FEBB2425C40600DC73E0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AE43FEC32426F7F100DC73E0 /* mapIcon.png */,
 				AE43FEC02426B24100DC73E0 /* homeIcon.png */,
 				AE43FEBC2425CF6800DC73E0 /* poster-placeholder.png */,
 			);
@@ -192,6 +195,7 @@
 				AE43FEBD2425CF6800DC73E0 /* poster-placeholder.png in Resources */,
 				AE43FEA02423341D00DC73E0 /* Main.storyboard in Resources */,
 				AE43FEC12426B24100DC73E0 /* homeIcon.png in Resources */,
+				AE43FEC42426F7F300DC73E0 /* mapIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
