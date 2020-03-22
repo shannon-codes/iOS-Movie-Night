@@ -47,7 +47,6 @@ class ViewDetailsViewController: UIViewController {
         
         mTitle.text = selectedMovie.title
         mReleaseDate.text = selectedMovie.releaseDate
-        //mVoteAverage.text = "\(selectedMovie.voteAverage)"
         
         let numFormatter = NumberFormatter()
         numFormatter.usesGroupingSeparator = true
@@ -59,7 +58,8 @@ class ViewDetailsViewController: UIViewController {
         
        mOverview.text = selectedMovie.overview
     
-        //print(selectedMovie.mid) use movie id to call get movie and use key names "key" to combine with youtube path to load video
-        
     }
+    
+    //TO DO : create json parse method to triggerred by the watch trailer button to generate a youtube path
+    //print(selectedMovie.mid) use movie id to call get movie and use key names "key" to combine with youtube path to load video
 }

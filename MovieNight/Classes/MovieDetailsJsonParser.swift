@@ -11,19 +11,25 @@ import Foundation
 
 class MovieDetailsJsonParser: NSObject {
 
+    //Array of movies objects from parsed Json into movie objects
+    var movies: [Movie] = []
+    
     var mid : Int = 0
     var title : String = ""
     var fullPosterPath : String = ""
     var voteAverage : NSNumber = 0.0
     var releaseDate : String = ""
     var overview : String = ""
+    
+    
 
-//apiLink[0] is upcoming movies
+    //apiLink[0] is upcoming movies
     //apiLink[0] is now playing movies
+    //apiLink[0] is top rated movies
     let apiLink : [String] = ["https://api.themoviedb.org/3/movie/upcoming?api_key=64aee71233303f691dfcb9185c3fd008&language=en-US&page=1&region=US",
     "https://api.themoviedb.org/3/movie/now_playing?api_key=64aee71233303f691dfcb9185c3fd008&language=en-US&region=CA",
     "https://api.themoviedb.org/3/movie/top_rated?api_key=64aee71233303f691dfcb9185c3fd008&language=en-US&page=1&region=CA"]
-    var movies: [Movie] = []
+    
     
     func getDataFromJson(apiChoice: Int){
         if let url = NSURL(string: apiLink[apiChoice]){
@@ -49,12 +55,12 @@ class MovieDetailsJsonParser: NSObject {
                         //print(title)
                         
                         if let posterPath = movieDict?["poster_path"] as? String {
-                            // obj is a string array. Do something with stringArray
+                            // obj is a string . Do something with string
                               fullPosterPath="https://image.tmdb.org/t/p/w500"+posterPath
                         }
                         else {
-                            // obj is not a string array
-                            //fullPosterPath="https://i2.wp.com/www.theatrecr.org/wp-content/uploads/2016/01/poster-placeholder.png"
+                            // obj is not a string e.g. nil therefore use placeholder
+                           
                             fullPosterPath="unavailable"
                         }
                         
@@ -63,7 +69,11 @@ class MovieDetailsJsonParser: NSObject {
                         releaseDate = (movieDict?["release_date"] as? String)!
                         overview = (movieDict?["overview"] as? String)!
                         
+                        //instantiate movie object with movie details
+                        
                         let movie = Movie(mid: mid, title: title, poster: fullPosterPath, voteAverage: voteAverage, releaseDate: releaseDate, overview: overview)
+                        
+                        //add to array of movies objects
                         movies.append(movie)
                         
                     }
@@ -74,9 +84,6 @@ class MovieDetailsJsonParser: NSObject {
                 }
             }
             
-            
-            
-
         }
     }
     

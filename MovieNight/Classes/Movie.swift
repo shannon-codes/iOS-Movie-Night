@@ -8,6 +8,7 @@
 
 import Foundation
 
+//model
 struct Movie {
     
     

@@ -10,7 +10,6 @@ import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    //var apiChoice : [String] = []
     let movieData = MovieDetailsJsonParser()
     
     @IBOutlet var sgMovieCategory : UISegmentedControl!
@@ -20,9 +19,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         updateAPI()
        
-        // Do any additional setup after loading the view.
     }
     
   
