@@ -21,6 +21,14 @@
 		AE43FEBF242696B200DC73E0 /* ViewDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43FEBE242696B200DC73E0 /* ViewDetailsViewController.swift */; };
 		AE43FEC12426B24100DC73E0 /* homeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AE43FEC02426B24100DC73E0 /* homeIcon.png */; };
 		AE43FEC42426F7F300DC73E0 /* mapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AE43FEC32426F7F100DC73E0 /* mapIcon.png */; };
+		AE6AF0232441554A0031CD0D /* MyDatabase5.db in Resources */ = {isa = PBXBuildFile; fileRef = AE6AF0222441554A0031CD0D /* MyDatabase5.db */; };
+		AE6AF026244165B40031CD0D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6AF024244165B40031CD0D /* libsqlite3.0.tbd */; };
+		AE6AF027244165B40031CD0D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6AF025244165B40031CD0D /* libsqlite3.tbd */; };
+		AE6AF02E244172E30031CD0D /* ViewDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6AF02A244172E30031CD0D /* ViewDetailsViewController.swift */; };
+		AE6AF02F244172E30031CD0D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6AF02B244172E30031CD0D /* HomeViewController.swift */; };
+		AE6AF030244172E40031CD0D /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6AF02C244172E30031CD0D /* FeaturedCollectionViewCell.swift */; };
+		AE6AF031244172E40031CD0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6AF02D244172E30031CD0D /* ViewController.swift */; };
+		AEBA0CFC24417C4D0008EAB9 /* FavouritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA0CFB24417C4D0008EAB9 /* FavouritesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +48,14 @@
 		AE43FEBE242696B200DC73E0 /* ViewDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDetailsViewController.swift; sourceTree = "<group>"; };
 		AE43FEC02426B24100DC73E0 /* homeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeIcon.png; sourceTree = "<group>"; };
 		AE43FEC32426F7F100DC73E0 /* mapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapIcon.png; sourceTree = "<group>"; };
+		AE6AF0222441554A0031CD0D /* MyDatabase5.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyDatabase5.db; sourceTree = "<group>"; };
+		AE6AF024244165B40031CD0D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		AE6AF025244165B40031CD0D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		AE6AF02A244172E30031CD0D /* ViewDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDetailsViewController.swift; sourceTree = "<group>"; };
+		AE6AF02B244172E30031CD0D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AE6AF02C244172E30031CD0D /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
+		AE6AF02D244172E30031CD0D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AEBA0CFB24417C4D0008EAB9 /* FavouritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE6AF026244165B40031CD0D /* libsqlite3.0.tbd in Frameworks */,
+				AE6AF027244165B40031CD0D /* libsqlite3.tbd in Frameworks */,
 				AE43FEB224247B5600DC73E0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +92,7 @@
 		AE43FE992423341D00DC73E0 /* MovieNight */ = {
 			isa = PBXGroup;
 			children = (
+				AE6AF0212441552E0031CD0D /* Database */,
 				AE43FEBB2425C40600DC73E0 /* Images */,
 				AE43FEBA2425C3CB00DC73E0 /* ViewControllers */,
 				AE43FEB82425C3A800DC73E0 /* Storyboards */,
@@ -87,6 +106,8 @@
 		AE43FEB024247B5500DC73E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE6AF024244165B40031CD0D /* libsqlite3.0.tbd */,
+				AE6AF025244165B40031CD0D /* libsqlite3.tbd */,
 				AE43FEB124247B5600DC73E0 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -114,6 +135,11 @@
 		AE43FEBA2425C3CB00DC73E0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				AEBA0CFB24417C4D0008EAB9 /* FavouritesTableViewController.swift */,
+				AE6AF02C244172E30031CD0D /* FeaturedCollectionViewCell.swift */,
+				AE6AF02B244172E30031CD0D /* HomeViewController.swift */,
+				AE6AF02D244172E30031CD0D /* ViewController.swift */,
+				AE6AF02A244172E30031CD0D /* ViewDetailsViewController.swift */,
 				AE43FE9C2423341D00DC73E0 /* ViewController.swift */,
 				AE43FEB32425C34B00DC73E0 /* HomeViewController.swift */,
 				AE43FEB52425C38200DC73E0 /* FeaturedCollectionViewCell.swift */,
@@ -130,6 +156,14 @@
 				AE43FEBC2425CF6800DC73E0 /* poster-placeholder.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		AE6AF0212441552E0031CD0D /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				AE6AF0222441554A0031CD0D /* MyDatabase5.db */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE6AF0232441554A0031CD0D /* MyDatabase5.db in Resources */,
 				AE43FEA52423341F00DC73E0 /* LaunchScreen.storyboard in Resources */,
 				AE43FEA22423341F00DC73E0 /* Assets.xcassets in Resources */,
 				AE43FEBD2425CF6800DC73E0 /* poster-placeholder.png in Resources */,
@@ -208,8 +243,13 @@
 			files = (
 				AE43FEB42425C34B00DC73E0 /* HomeViewController.swift in Sources */,
 				AE43FE9D2423341D00DC73E0 /* ViewController.swift in Sources */,
+				AE6AF030244172E40031CD0D /* FeaturedCollectionViewCell.swift in Sources */,
+				AE6AF02E244172E30031CD0D /* ViewDetailsViewController.swift in Sources */,
+				AE6AF031244172E40031CD0D /* ViewController.swift in Sources */,
+				AEBA0CFC24417C4D0008EAB9 /* FavouritesTableViewController.swift in Sources */,
 				AE43FEB62425C38200DC73E0 /* FeaturedCollectionViewCell.swift in Sources */,
 				AE43FE9B2423341D00DC73E0 /* AppDelegate.swift in Sources */,
+				AE6AF02F244172E30031CD0D /* HomeViewController.swift in Sources */,
 				AE43FEBF242696B200DC73E0 /* ViewDetailsViewController.swift in Sources */,
 				AE43FEAF24245FBB00DC73E0 /* Movie.swift in Sources */,
 				AE43FEAD24244C4200DC73E0 /* MovieDetailsJsonParser.swift in Sources */,

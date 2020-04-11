@@ -16,15 +16,28 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var collectionView1 : UICollectionView!
     let reuseIdentifier = "featuredCell"
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateAPI()
+        
+        print("goodbye")
+        
+        //put after login page on homepage or favourites pageview controller
+        //FireBase get currently signed in user
+        //https://firebase.google.com/docs/auth/ios/manage-users#get_a_users_profile
+        //let user = Auth.auth().currentUser
+        //    if let user = user {
+        //        // The user's ID, unique to the Firebase project.
+        //        // Do NOT use this value to authenticate with your backend server,
+        //        // if you have one. Use getTokenWithCompletion:completion: instead.
+        //        let uid = user.uid
+        //        let email = user.email
+        //        let photoURL = user.photoURL
+        //    }
+        //store uid in appdelegate
        
     }
-    
-  
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat{
         return 50
@@ -50,7 +63,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         return 0
     }
-    
+    //provide content for each custom cell of type FeaturedCollectionCell.swift
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if(collectionView == self.collectionView1){
@@ -59,10 +72,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             
             if(movieData.movies[indexPath.row].poster == "unavailable"){
                 
-                cell.featuredImage.image = UIImage(named: "poster-placeholder.png")
+                        cell.featuredImage.image = UIImage(named: "poster-placeholder.png")
                 
             }else{
-          
+                //display an image from a remote url
                 let imageURL = URL(string: movieData.movies[indexPath.row].poster)
                 
                 // just not to cause a deadlock in UI!

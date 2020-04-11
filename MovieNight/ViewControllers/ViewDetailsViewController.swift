@@ -15,13 +15,17 @@ class ViewDetailsViewController: UIViewController {
     @IBOutlet var mReleaseDate : UILabel!
     @IBOutlet var mVoteAverage : UILabel!
     @IBOutlet var mOverview : UILabel!
+    
+    let mainDelegate = UIApplication.shared.delegate as? AppDelegate
+    
+    var selectedMovie : Movie = Movie()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let mainDelegate = UIApplication.shared.delegate as? AppDelegate
         
-        let selectedMovie : Movie = mainDelegate!.selectedMovie
+        selectedMovie = mainDelegate!.selectedMovie
+        
 
         if(selectedMovie.poster == "unavailable"){
             
@@ -58,6 +62,25 @@ class ViewDetailsViewController: UIViewController {
         
        mOverview.text = selectedMovie.overview
     
+    }
+    
+    @IBAction func addFavourite(sender: UIButton){
+        
+        
+        print(mainDelegate?.currentUserID)
+        
+        if ((mainDelegate?.currentUserID) != nil){
+            let returnCode = mainDelegate!.insertIntoDatabase(myMovie: selectedMovie)
+            if(returnCode){
+                print("success insert")
+            }else{
+                print("fail insert")
+            }
+        }else{
+            print("no user is logged in therefore no users favourites")
+        }
+        
+        
     }
     
     //TO DO : create json parse method to triggerred by the watch trailer button to generate a youtube path

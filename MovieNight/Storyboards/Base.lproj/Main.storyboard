@@ -39,7 +39,6 @@
         <!--Home-->
         <scene sceneID="Opd-V1-g8J">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EBx-06-rS9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ffk-ja-TTz" customClass="HomeViewController" customModule="MovieNight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TO2-XL-Bon">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -128,6 +127,7 @@
                         <segue destination="SZv-0S-DmN" kind="presentation" identifier="SegueToMovieDetails" id="NNT-cP-N7R"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EBx-06-rS9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3036.2318840579715" y="517.63392857142856"/>
         </scene>
@@ -222,6 +222,9 @@
                                 <state key="normal" title="Add to Favourites">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addFavouriteWithSender:" destination="SZv-0S-DmN" eventType="touchUpInside" id="SAv-lO-Ddc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -240,10 +243,10 @@
             </objects>
             <point key="canvasLocation" x="-2086.9565217391305" y="515.625"/>
         </scene>
-        <!--View Controller-->
+        <!--Favourites Table View Controller-->
         <scene sceneID="OJQ-nS-wPP">
             <objects>
-                <viewController id="Ug0-Qh-Sml" sceneMemberID="viewController">
+                <viewController id="Ug0-Qh-Sml" customClass="FavouritesTableViewController" customModule="MovieNight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mtE-NV-TgS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -252,7 +255,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Favoourites" id="NSS-NF-qH1"/>
+                                    <navigationItem title="Favourites" id="NSS-NF-qH1"/>
                                 </items>
                             </navigationBar>
                         </subviews>
