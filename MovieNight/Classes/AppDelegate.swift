@@ -2,9 +2,10 @@
 //  AppDelegate.swift
 //  MovieNight
 //
-//  Created by Xcode User on 2020-03-19.
-//  Copyright © 2020 Shannon Lim. All rights reserved.
+//  Created by Shannon Lim on 2020-03-19
 //
+//  Purpose: Singleton class that is instantiated only once and is for sharing data between objects
+//      This contains all the methods for SQLite database access such as database creation, select/read, insert and delete.
 
 import UIKit
 import SQLite3
@@ -18,13 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var databasePath: String?
     var favouriteMovies : [Movie] = []
     var currentUserID : String?
-    let favMovies = MovieDetailsJsonParser()
+   
     
     // sharing data (from model selected movie object) between objects 
     var selectedMovie: Movie = Movie()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
         let documentPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         
@@ -33,7 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         databasePath = documentsDir.appending("/" + databaseName!)
         
         checkAndCreateDatabase()
-        //readDataFromDatabase()
         
         return true
     }
@@ -49,7 +48,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if success{
             return
         }
-        
         
         let databasePathFromApp = Bundle.main.resourcePath?.appending("/" + databaseName!)
         
@@ -93,7 +91,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 //free up malloc'd memory, flush data
                 sqlite3_finalize(queryStatement)
                 
-                favMovies.getDataFromJson(movieIDs: setMovieIds)
+                //Send set of Movie IDs to web API to get Movie Object Favourites Array
+                favouriteMovies = MovieDetailsJsonParser().getDataFromJson(movieIDs: setMovieIds)
                 
             }else{
                 print("unable to prepare select statement")
@@ -104,6 +103,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    //Add to Favourites Table in SQLITE3
     func insertIntoDatabase(myMovie : Movie) -> Bool {
         var db: OpaquePointer? = nil
         var returnCode : Bool = true
@@ -130,6 +130,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 sqlite3_finalize(insertStatement)
             }else{
                 print("insert statement could not be prepared")
+                returnCode = false
+            }
+            
+            sqlite3_close(db)
+        }
+        
+        return returnCode
+        
+    }
+    
+    //Delete from favourites table in SQLITE3
+    func deleteFromDatabase(selectedMovieId: Int) -> Bool {
+        var db: OpaquePointer? = nil
+        var returnCode : Bool = true
+        
+        if sqlite3_open(self.databasePath, &db) ==  SQLITE_OK {
+            
+            var deleteStatement : OpaquePointer? = nil
+            
+            //"delete from users where id=?"
+            var deleteStatementString : String = "delete from favourites where userID=? and movieId=?"
+            if sqlite3_prepare_v2(db, deleteStatementString, -1, &deleteStatement, nil) == SQLITE_OK {
+                
+                
+                let uidStr = currentUserID! as NSString
+                let movieIdInt32 = Int32(selectedMovieId)
+                
+                 sqlite3_bind_text(deleteStatement, 1, uidStr.utf8String, -1, nil)
+             
+                sqlite3_bind_int(deleteStatement, 2, movieIdInt32)
+                
+                if sqlite3_step(deleteStatement) == SQLITE_DONE{
+                    
+                    let rowsAffected = sqlite3_changes(db)
+                    
+                    print("successfully deleted \(rowsAffected) row(s)")
+                    
+                }else{
+                    print("could not delete row")
+                    returnCode = false
+                }
+                sqlite3_finalize(deleteStatement)
+            }else{
+                print("delete statement could not be prepared")
                 returnCode = false
             }
             

@@ -2,9 +2,9 @@
 //  FeaturedCollectionViewCell.swift
 //  MovieNight
 //
-//  Created by Xcode User on 2020-03-20.
-//  Copyright © 2020 Shannon Lim. All rights reserved.
+//  Created by Shannon Lim on 2020-03-20
 //
+//  Purpose: Provides the outlets to the storyboard defining a custom Collection View Cell
 
 import UIKit
 

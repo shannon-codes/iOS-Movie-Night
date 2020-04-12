@@ -2,8 +2,7 @@
 //  ViewController.swift
 //  MovieNight
 //
-//  Created by Xcode User on 2020-03-19.
-//  Copyright © 2020 Shannon Lim. All rights reserved.
+//  Created by Shannon Lim on 2020-03-19.
 //
 
 import UIKit
@@ -13,12 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //var set3: Set<Int> = [446893,514847,508439]
-        //MovieDetailsJsonParser().getDataFromJson(movieIDs: set3)
+        
         let mainDelegate = UIApplication.shared.delegate as? AppDelegate
+        
+        //Get the currently signed in user and store userID in the AppDelegate.swift so I can later select from database by userID
         mainDelegate?.currentUserID = "123"
         
-        print("helo")
     }
 
 

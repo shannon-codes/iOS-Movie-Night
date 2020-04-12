@@ -24,11 +24,8 @@
 		AE6AF0232441554A0031CD0D /* MyDatabase5.db in Resources */ = {isa = PBXBuildFile; fileRef = AE6AF0222441554A0031CD0D /* MyDatabase5.db */; };
 		AE6AF026244165B40031CD0D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6AF024244165B40031CD0D /* libsqlite3.0.tbd */; };
 		AE6AF027244165B40031CD0D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6AF025244165B40031CD0D /* libsqlite3.tbd */; };
-		AE6AF02E244172E30031CD0D /* ViewDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6AF02A244172E30031CD0D /* ViewDetailsViewController.swift */; };
-		AE6AF02F244172E30031CD0D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6AF02B244172E30031CD0D /* HomeViewController.swift */; };
-		AE6AF030244172E40031CD0D /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6AF02C244172E30031CD0D /* FeaturedCollectionViewCell.swift */; };
-		AE6AF031244172E40031CD0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6AF02D244172E30031CD0D /* ViewController.swift */; };
 		AEBA0CFC24417C4D0008EAB9 /* FavouritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA0CFB24417C4D0008EAB9 /* FavouritesTableViewController.swift */; };
+		AECC17CC24418B78000F4339 /* SiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECC17CB24418B78000F4339 /* SiteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,11 +48,8 @@
 		AE6AF0222441554A0031CD0D /* MyDatabase5.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyDatabase5.db; sourceTree = "<group>"; };
 		AE6AF024244165B40031CD0D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		AE6AF025244165B40031CD0D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		AE6AF02A244172E30031CD0D /* ViewDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDetailsViewController.swift; sourceTree = "<group>"; };
-		AE6AF02B244172E30031CD0D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		AE6AF02C244172E30031CD0D /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
-		AE6AF02D244172E30031CD0D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AEBA0CFB24417C4D0008EAB9 /* FavouritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTableViewController.swift; sourceTree = "<group>"; };
+		AECC17CB24418B78000F4339 /* SiteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +110,7 @@
 		AE43FEB72425C3A000DC73E0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AECC17CB24418B78000F4339 /* SiteCell.swift */,
 				AE43FEAE24245FBB00DC73E0 /* Movie.swift */,
 				AE43FEAC24244C4100DC73E0 /* MovieDetailsJsonParser.swift */,
 				AE43FE9A2423341D00DC73E0 /* AppDelegate.swift */,
@@ -136,10 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				AEBA0CFB24417C4D0008EAB9 /* FavouritesTableViewController.swift */,
-				AE6AF02C244172E30031CD0D /* FeaturedCollectionViewCell.swift */,
-				AE6AF02B244172E30031CD0D /* HomeViewController.swift */,
-				AE6AF02D244172E30031CD0D /* ViewController.swift */,
-				AE6AF02A244172E30031CD0D /* ViewDetailsViewController.swift */,
 				AE43FE9C2423341D00DC73E0 /* ViewController.swift */,
 				AE43FEB32425C34B00DC73E0 /* HomeViewController.swift */,
 				AE43FEB52425C38200DC73E0 /* FeaturedCollectionViewCell.swift */,
@@ -243,13 +234,10 @@
 			files = (
 				AE43FEB42425C34B00DC73E0 /* HomeViewController.swift in Sources */,
 				AE43FE9D2423341D00DC73E0 /* ViewController.swift in Sources */,
-				AE6AF030244172E40031CD0D /* FeaturedCollectionViewCell.swift in Sources */,
-				AE6AF02E244172E30031CD0D /* ViewDetailsViewController.swift in Sources */,
-				AE6AF031244172E40031CD0D /* ViewController.swift in Sources */,
 				AEBA0CFC24417C4D0008EAB9 /* FavouritesTableViewController.swift in Sources */,
 				AE43FEB62425C38200DC73E0 /* FeaturedCollectionViewCell.swift in Sources */,
+				AECC17CC24418B78000F4339 /* SiteCell.swift in Sources */,
 				AE43FE9B2423341D00DC73E0 /* AppDelegate.swift in Sources */,
-				AE6AF02F244172E30031CD0D /* HomeViewController.swift in Sources */,
 				AE43FEBF242696B200DC73E0 /* ViewDetailsViewController.swift in Sources */,
 				AE43FEAF24245FBB00DC73E0 /* Movie.swift in Sources */,
 				AE43FEAD24244C4200DC73E0 /* MovieDetailsJsonParser.swift in Sources */,
