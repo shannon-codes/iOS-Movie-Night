@@ -116,6 +116,13 @@ class FavouritesTableViewController: UIViewController, UITableViewDelegate, UITa
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        mainDelegate?.selectedMovie = mainDelegate!.favouriteMovies[indexPath.row]
+        
+        performSegue(withIdentifier: "SegueToMovieDetails2", sender: nil)    }
+    
+    
     @IBAction func unwindToTableVC(Sender: UIStoryboardSegue){
   
     }

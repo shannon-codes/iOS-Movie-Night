@@ -155,9 +155,14 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Movie Details" id="2rm-a6-TYv">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Rft-xA-xHl">
+                                        <barButtonItem key="leftBarButtonItem" title="Home" id="Rft-xA-xHl">
                                             <connections>
                                                 <segue destination="seB-jr-eae" kind="unwind" unwindAction="unwindToHomeVCWithSender:" id="0lb-J1-Ux6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Favourites" id="dA6-iT-I0f">
+                                            <connections>
+                                                <segue destination="seB-jr-eae" kind="unwind" unwindAction="unwindToTableVCWithSender:" id="e2a-VP-jkB"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -274,6 +279,7 @@
                     <tabBarItem key="tabBarItem" title="" systemItem="favorites" id="btE-Hx-OJa"/>
                     <connections>
                         <outlet property="myTableView" destination="n4V-eO-2Rh" id="h3r-gU-ofj"/>
+                        <segue destination="SZv-0S-DmN" kind="presentation" identifier="SegueToMovieDetails2" id="EbL-5Y-feT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YBw-2H-ASy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -329,4 +335,7 @@
         <image name="homeIcon.png" width="30" height="30"/>
         <image name="mapIcon.png" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="EbL-5Y-feT"/>
+    </inferredMetricsTieBreakers>
 </document>
