@@ -33,5 +33,5 @@ Features I implemented were:
 
 ![Login, Register, Movie Collections, Movie Details](screenshots/screens1.png)
 
-![Favorites, Map Directions](screenshots/screens2.png)
+![Favorites, Map Get Directions](screenshots/screens2.png)
 
