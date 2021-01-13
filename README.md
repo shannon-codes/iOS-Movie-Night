@@ -1,5 +1,5 @@
 # iOS-Movie-Night
-This was my final group project for iOS Mobile Application Development. It was a team project alongside Scott, Andrei, and Afsar.
+This was my final group project for iOS Mobile Application Development course. It was a team project alongside Scott, Andrei, and Afsar.
 
 Programming Language: Swift
 Development Environment: Xcode 10.3, deployment target is minimum iOS 12.4, iPhone XR Simulator
