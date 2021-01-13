@@ -28,4 +28,10 @@ Features I implemented were:
     
   5. Integration:
     - Integrate and merge together all the team members storyboards and View Controllers
+    
+## Screenshots:
+
+![Login, Register, Movie Collections, Movie Details](screenshots/screens1.png)
+
+![Favorites, Map Directions](screenshots/screens2.png)
 
