@@ -13,11 +13,11 @@ Result: Our team received a project grade of 88%.
 - Screen 1 and 2: For signing up and registering we used Firebase real-time database. 
 - Screen 3: Browse movies by 3 categories, and navigate app using TabBar Navigation below.
 - Screen 4: View movie information, pressing "Add to Favorite" saves selected movie to SQLite3 database, pressing "Set Reminder" schedules a local notification according the movie release date
-<img src="screenshots/screens1.png" height="500" alt="UI Screens of Login, Register, Movie Collections, Movie Details">
+<img src="screenshots/screens1.png" height="400" alt="UI Screens of Login, Register, Movie Collections, Movie Details">
 
 - Screen 5: Displays registered user's favourite movies from SQLite3, Swipe right to Delete movie from Favourites
 - Screen 6: Use MapViewKit and CoreLocation to draw the directions and provide directions step-by-step
-<img src="screenshots/screens2.png" height="500" alt="UI Screens of Favorites, Map Get Directions">
+<img src="screenshots/screens2.png" height="400" alt="UI Screens of Favorites, Map Get Directions">
 
 ## Features I implemented were:
 
