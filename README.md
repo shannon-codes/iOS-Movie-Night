@@ -23,7 +23,7 @@ Result: Our team received a project grade of 88%.
 
   - Movie Poster Screen 
     - Make HTTP Request to The Movie Database API (themoviedb.org) to fetch movie details from themoviedb.org server
-    - Service class to Parse JSON Response to any array of model Movie struct
+    - Parse JSON Response to an array of model Movie struct
     - Display Movies in Collection View updated by Segmented Control for Upcoming, Now Playing, Top Rated movie categories
     
   - Movie Details Screen:
